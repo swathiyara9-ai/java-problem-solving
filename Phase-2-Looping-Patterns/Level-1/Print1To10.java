@@ -1,4 +1,4 @@
-import java.util.*;
+//import java.util.*;
 
 public class Print1To10 {
     public static void main(String[] args) {
