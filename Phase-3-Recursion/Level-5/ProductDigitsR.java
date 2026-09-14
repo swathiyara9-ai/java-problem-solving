@@ -1,20 +1,16 @@
 import java.util.*;
 
-public class CountGreaterFiveR {
+public class ProductDigitsR {
 
-    static int count(int n) {
+    static int product(int n) {
 
         if (n == 0) {
-            return 0;
+            return 1;
         }
 
         int digit = n % 10;
 
-        if (digit > 5) {
-            return 1 + count(n / 10);
-        }
-
-        return count(n / 10);
+        return digit * product(n / 10);
     }
 
     public static void main(String[] args) {
@@ -24,7 +20,7 @@ public class CountGreaterFiveR {
         System.out.print("Number = ");
         int n = sc.nextInt();
 
-        System.out.println("Count = " + count(n));
+        System.out.println("Product = " + product(n));
 
         sc.close();
     }
